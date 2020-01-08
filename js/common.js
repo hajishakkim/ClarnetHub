@@ -30,10 +30,19 @@ $(document).ready(function () {
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top - 100
         }, 500);
-    });
-    
+    });    
     $(window).resize(function () {
         scrollHeaderClass();
     });
+	$('.chat-head-icon').on('mouseenter',function(){	
+		$('.chat-head-title').fadeIn(300);
+	});
+	$('.chat-head-icon').on('mouseleave',function(){	
+		$('.chat-head-title').fadeOut(500);
+	});
 
-});
+	 
+ });
+function showProfileMenu(){
+	$('.profile-list').toggleClass('hide');
+}
